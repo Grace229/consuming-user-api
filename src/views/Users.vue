@@ -47,18 +47,19 @@ newname: null,
          console.log(getUsers);
   },
  methods: {
-        addUser(){
-let user = this.newname
-if(user == ""){
-alert("Name field required");
-}else{        
-            user ={ name: user };
+  addUser(){
+          if(this.newname == ""){
+          alert("Name field required");
+          return ;
+            }
+                  
+            this.newname ={ name: this.newname };
             this.Users.unshift(user)
-                this.user = ""
-console.log(user)
+                this.newname = ""
+            console.log(newname);
 
 
-}
+
          
       },
 clearUser(User){
