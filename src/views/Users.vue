@@ -32,8 +32,8 @@ export default {
 data(){
 return{
 Users: [],
-newname: null,
-};
+newname: null
+}
 },
  
  
@@ -48,18 +48,20 @@ newname: null,
   },
  methods: {
   addUser(){
-          if(this.newname == ""){
-          alert("Name field required");
-          return ;
+          if(this.newname !== null){
+          this.newname ={ name: this.newname };
+            this.Users.unshift(this.newname)
+                this.newname = null
+            console.log(newname)
+            }else{
+              alert("Name field required");
             }
                   
-            this.newname ={ name: this.newname };
-            this.Users.unshift(user)
-                this.newname = ""
-            console.log(newname);
+           
 
 
-
+ 
+        
          
       },
 clearUser(User){
