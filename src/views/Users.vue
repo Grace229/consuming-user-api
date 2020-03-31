@@ -54,7 +54,7 @@ newname: null
                 this.newname = null
             console.log(newname)
             }else{
-              alert("Name field required");
+              alert("Name field can't be empty");
             }
                   
            
